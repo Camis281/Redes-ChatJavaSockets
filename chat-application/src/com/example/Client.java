@@ -10,7 +10,7 @@ public class Client {
         BufferedReader in = null;
 
         try {
-            // Cria um Socket para conectar ao servidor na porta 4444
+            // Criar um Socket para conectar ao servidor na porta 4444
             kkSocket = new Socket("localhost", 4444);
             out = new PrintWriter(kkSocket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(kkSocket.getInputStream()));
@@ -23,7 +23,7 @@ public class Client {
         }
 
         try (
-            // Cria um BufferedReader para ler entrada do usuário
+            // Criar um BufferedReader para ler entrada do usuário
             BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
         ) {
             String userInput;
