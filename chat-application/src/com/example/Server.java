@@ -6,7 +6,7 @@ public class Server {
     public static void main(String[] args) {
         ServerSocket serverSocket = null;
         try {
-            // Cria um ServerSocket para escutar na porta 4444
+            // Criar um ServerSocket para escutar na porta 4444
             serverSocket = new ServerSocket(4444);
             System.out.println("Servidor escutando na porta 4444...");
         } catch (IOException e) {
@@ -25,9 +25,9 @@ public class Server {
         }
 
         try (
-            // Cria um PrintWriter para enviar dados ao cliente
+            // Criar um PrintWriter para enviar dados ao cliente
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-            // Cria um BufferedReader para ler dados do cliente
+            // Criar um BufferedReader para ler dados do cliente
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         ) {
             String inputLine;
